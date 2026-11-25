@@ -22,7 +22,14 @@ How it works:
 
 ## Install
 
-1. Open the `model-router.plugin` file in Claude and accept it. Or, in the Code tab, click **+** next to the prompt box and choose **Add plugins**.
+1. Install the plugin from GitHub. In a terminal:
+
+   ```bash
+   claude plugin marketplace add roman-ambinder/model-router
+   claude plugin install model-router@model-router
+   ```
+
+   Or inside a session: `/plugin marketplace add roman-ambinder/model-router`, then `/plugin install model-router@model-router`. You can also open the `model-router.plugin` file in Claude and accept it.
 2. Start a new local session. Plugins do not load in WSL or cloud sessions.
 3. Run `/model opusplan` once and press Enter to save it as your default. The plugin cannot set this for you. If `/model` is not available, add `"model": "opusplan"` to `~/.claude/settings.json` yourself.
 4. Check that the session shows `opusplan` as its model. If you skip step 3, everything runs on your default model and you save nothing.
@@ -53,3 +60,7 @@ Edit either one, raise `version` in `.claude-plugin/plugin.json`, and reinstall.
 - **`opusplan` is rejected, or plan mode stays on Sonnet.** Run `/model sonnet`, or pick Sonnet in the model picker. Planning still reaches Opus through the `architect` subagent.
 - **Your account blocks Opus.** `architect` should run on another permitted model. If it errors, change `model: opus` to `model: sonnet` in `agents/architect.md`. `scout` routing still works.
 - **Too many handoffs.** Make the agent descriptions narrower, or raise the "tiny tasks" limit in the table.
+
+## License
+
+MIT. See `LICENSE`.

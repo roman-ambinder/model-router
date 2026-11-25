@@ -1,5 +1,10 @@
 {
   "name": "model-router",
   "version": "0.1.0",
-  "description": "Routes each task to the cheapest model that does it well: Haiku for lookups, Sonnet for normal work, Opus for planning and hard problems."
+  "description": "Routes each task to the cheapest model that does it well: Haiku for lookups, Sonnet for normal work, Opus for planning and hard problems.",
+  "author": {
+    "name": "Roman Ambinder"
+  },
+  "repository": "https://github.com/roman-ambinder/model-router",
+  "license": "MIT"
 }

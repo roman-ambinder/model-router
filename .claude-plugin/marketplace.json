@@ -1,0 +1,14 @@
+{
+  "name": "model-router",
+  "description": "Automatic model routing for Claude Code",
+  "owner": {
+    "name": "Roman Ambinder"
+  },
+  "plugins": [
+    {
+      "name": "model-router",
+      "source": "./",
+      "description": "Routes each task to the cheapest model that does it well: Haiku for lookups, Sonnet for normal work, Opus for planning and hard problems."
+    }
+  ]
+}
